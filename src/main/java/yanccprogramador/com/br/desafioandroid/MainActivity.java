@@ -87,7 +87,7 @@ public class MainActivity extends Activity  {
         }
         niv=new NetworkImageView(getApplicationContext());
 
-        adp = new ArrayAdapter<Spanned>(this, android.R.layout.simple_list_item_1, lista);
+        adp = new ArrayAdapter<Spanned>(this, android.R.layout.simple_list_item_1);
         urls = new ArrayList<>();
         setContentView(R.layout.repos);
         ListView lv = (ListView) findViewById(R.id.lv1);
@@ -102,7 +102,7 @@ public class MainActivity extends Activity  {
                 buscarPuls();
                 setContentView(R.layout.pulls);
                 ListView lv1 = (ListView) findViewById(R.id.lv2);
-                adpPull = new ArrayAdapter<Spanned>(getApplicationContext(), android.R.layout.simple_list_item_1, listaPull);
+                adpPull = new ArrayAdapter<Spanned>(getApplicationContext(), android.R.layout.simple_list_item_1);
                 lv1.setAdapter(adpPull);
 
                 lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
